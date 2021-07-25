@@ -1,0 +1,13 @@
+.Todo-form {
+  height: 3rem;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  outline: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+}

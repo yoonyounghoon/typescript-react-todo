@@ -1,0 +1,42 @@
+.Todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+.Todo-item:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.active,
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  text-decoration: line-through;
+  color: #dbdbdb;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+  margin-right: 2rem;
+}
+
+.text {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.delete {
+  font-size: 1rem;
+  border-radius: 4px;
+  padding: 0.25rem 1rem;
+  outline: none;
+  border: none;
+  background-color: #57bfc8;
+  color: white;
+}

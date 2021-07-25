@@ -1,0 +1,29 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.TodoTemplate {
+  width: 600px;
+  background-color: #fff;
+}
+
+.head {
+  height: 1rem;
+  background-color: #35d2b3;
+}
+
+.Todo-title {
+  text-align: center;
+  margin: 0;
+  /* background-color: #f3ebaf; */
+  padding: 1rem;
+}
+
+.content {
+  /* background-color: #f3ebaf; */
+  padding: 1rem;
+}
