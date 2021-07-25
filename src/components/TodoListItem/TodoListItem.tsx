@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Todo } from '../TodoList/TodoList';
 import './TodoListItem.css';
 
@@ -9,17 +10,28 @@ type TodoListItemProps = {
 };
 
 function TodoListItem({ todo, onToggle, onRemove }: TodoListItemProps) {
+  const [visible, setVisible] = useState(false);
+
+  const handleVisible = () => {
+    console.log('enter!');
+    setVisible(true);
+  };
+
+  const handleInvisible = () => {
+    setVisible(false);
+  };
+
   return (
-    <div className="Todo-item">
-      <div className={todo.done ? 'active' : 'list'}>
-        <input className="checkbox" type="checkbox" checked={todo.done} onChange={() => onToggle(todo.id)} />
-        <div className="text" key={todo.id} onDoubleClick={() => onRemove(todo.id)}>
-          {todo.text}
-        </div>
+    <div className="Todo-item" onMouseOver={handleVisible} onMouseOut={handleInvisible}>
+      <div className={todo.done ? 'active list' : 'list'}>
+        <input className="checkbox" type="checkbox" checked={todo.done} onChange={() => onToggle(todo.id)} readOnly />
+        <input className={todo.done ? 'active text' : 'text'} key={todo.id} value={todo.text} />
       </div>
-      <button className="delete" onClick={() => onRemove(todo.id)}>
-        삭제
-      </button>
+      {visible && (
+        <button className="delete" onClick={() => onRemove(todo.id)} onMouseEnter={handleVisible}>
+          삭제
+        </button>
+      )}
     </div>
   );
 }

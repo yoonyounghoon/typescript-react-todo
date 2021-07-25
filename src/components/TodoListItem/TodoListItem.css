@@ -9,7 +9,6 @@
   background: #f8f9fa;
 }
 
-.active,
 .list {
   display: flex;
   align-items: center;
@@ -27,8 +26,12 @@
 }
 
 .text {
-  font-size: 1.125rem;
+  cursor: default;
   font-weight: bold;
+  font-size: 1.125rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
 .delete {
