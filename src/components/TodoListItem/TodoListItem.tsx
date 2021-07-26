@@ -13,7 +13,6 @@ function TodoListItem({ todo, onToggle, onRemove }: TodoListItemProps) {
   const [visible, setVisible] = useState(false);
 
   const handleVisible = () => {
-    console.log('enter!');
     setVisible(true);
   };
 
@@ -23,9 +22,9 @@ function TodoListItem({ todo, onToggle, onRemove }: TodoListItemProps) {
 
   return (
     <div className="Todo-item" onMouseOver={handleVisible} onMouseOut={handleInvisible}>
-      <div className={todo.done ? 'active list' : 'list'}>
+      <div className={todo.done ? 'done list' : 'list'}>
         <input className="checkbox" type="checkbox" checked={todo.done} onChange={() => onToggle(todo.id)} readOnly />
-        <input className={todo.done ? 'active text' : 'text'} key={todo.id} value={todo.text} />
+        <input className={todo.done ? 'done text' : 'text'} key={todo.id} readOnly value={todo.text} />
       </div>
       {visible && (
         <button className="delete" onClick={() => onRemove(todo.id)} onMouseEnter={handleVisible}>

@@ -42,10 +42,14 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const onRemoveCompleted = () => {
+    setTodos(todos.filter((todo) => todo.done === false));
+  };
+
   return (
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
-      <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
+      <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} onRemoveCompleted={onRemoveCompleted} />
     </TodoTemplate>
   );
 }

@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.active {
+.done {
   text-decoration: line-through;
   color: #dbdbdb;
 }
@@ -35,11 +35,6 @@
 }
 
 .delete {
-  font-size: 1rem;
-  border-radius: 4px;
-  padding: 0.25rem 1rem;
-  outline: none;
-  border: none;
   background-color: #57bfc8;
   color: white;
 }
