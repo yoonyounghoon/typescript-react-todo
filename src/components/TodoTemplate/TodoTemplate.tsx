@@ -10,7 +10,7 @@ function TodoTemplate({ children }: TodoTemplateProps) {
     <div className="wrapper">
       <div className="TodoTemplate">
         <div className="head"></div>
-        <h1 className="Todo-title">Todo App!</h1>
+        <h1 className="Todo-title">📝 TODO LIST</h1>
         <div className="content">{children}</div>
       </div>
     </div>

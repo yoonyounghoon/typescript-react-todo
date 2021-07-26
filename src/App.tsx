@@ -1,28 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import TodoInsert from './components/TodoInsert/TodoInsert';
-import TodoList from './components/TodoList/TodoList';
+import TodoList, { Todo } from './components/TodoList/TodoList';
 import TodoTemplate from './components/TodoTemplate/TodoTemplate';
 
+const getStore = () => {
+  let store = localStorage.getItem("todos");
+  return (store && JSON.parse(store)) || [];
+}
+
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: '넷플릭스 보기',
-      done: true,
-    },
-    {
-      id: 2,
-      text: '하루종일 누워있기',
-      done: true,
-    },
-    {
-      id: 3,
-      text: '하루 3끼 배달시켜먹기',
-      done: false,
-    },
-  ]);
-  const id = useRef(4);
+  const [todos, setTodos] = useState<Todo[] | []>(getStore());
+  
+  const id = useRef(1);
 
   const onInsert = (text: string): void => {
     const todo = {
@@ -30,8 +20,9 @@ function App() {
       text,
       done: false,
     };
-    setTodos(todos.concat(todo));
+    setTodos([...todos, todo]);
     id.current++;
+    localStorage.setItem("todos", JSON.stringify(todos));
   };
 
   const onToggle = (id: number) => {
@@ -45,6 +36,14 @@ function App() {
   const onRemoveCompleted = () => {
     setTodos(todos.filter((todo) => todo.done === false));
   };
+
+
+  useEffect(()=>{
+    localStorage.setItem("todos", JSON.stringify(todos));
+  },[todos])
+
+
+
 
   return (
     <TodoTemplate>
