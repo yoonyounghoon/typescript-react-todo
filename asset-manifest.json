@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/typescript-react-todo/static/css/main.b911a8c4.chunk.css",
+    "main.js": "/typescript-react-todo/static/js/main.ee24497b.chunk.js",
+    "main.js.map": "/typescript-react-todo/static/js/main.ee24497b.chunk.js.map",
+    "runtime-main.js": "/typescript-react-todo/static/js/runtime-main.d2b55583.js",
+    "runtime-main.js.map": "/typescript-react-todo/static/js/runtime-main.d2b55583.js.map",
+    "static/js/2.bf6cd543.chunk.js": "/typescript-react-todo/static/js/2.bf6cd543.chunk.js",
+    "static/js/2.bf6cd543.chunk.js.map": "/typescript-react-todo/static/js/2.bf6cd543.chunk.js.map",
+    "index.html": "/typescript-react-todo/index.html",
+    "static/css/main.b911a8c4.chunk.css.map": "/typescript-react-todo/static/css/main.b911a8c4.chunk.css.map",
+    "static/js/2.bf6cd543.chunk.js.LICENSE.txt": "/typescript-react-todo/static/js/2.bf6cd543.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/typescript-react-todo/static/media/NotoSansKR-Regular.457762ea.otf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2b55583.js",
+    "static/js/2.bf6cd543.chunk.js",
+    "static/css/main.b911a8c4.chunk.css",
+    "static/js/main.ee24497b.chunk.js"
+  ]
+}
